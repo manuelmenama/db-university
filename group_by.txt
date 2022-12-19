@@ -9,3 +9,9 @@ GROUP BY YEAR(`enrolment_date`);
 SELECT COUNT(id) AS `number_of_teachers`, `teachers`.`office_address`
 FROM `teachers`
 GROUP BY `teachers`.`office_address`;
+
+3. Calcolare la media dei voti di ogni appello d'esame
+
+SELECT `exam_id`, AVG(`vote`) AS `media_voto`
+FROM `exam_student`
+GROUP BY `exam_id`;
